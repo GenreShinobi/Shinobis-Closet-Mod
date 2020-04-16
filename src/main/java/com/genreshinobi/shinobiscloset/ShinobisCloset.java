@@ -27,7 +27,7 @@ public class ShinobisCloset
     // Declare a constant to hold MOD_ID for uniform elsewhere
     public static final String MOD_ID = "shinobiscloset";
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public ShinobisCloset() {
         instance = this;
