@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "shinobiscloset:clothes_desert",
+    "shinobiscloset:clothes_jungle",
+    "shinobiscloset:clothes_plains",
+    "shinobiscloset:clothes_savanna",
+    "shinobiscloset:clothes_snow",
+    "shinobiscloset:clothes_swamp",
+    "shinobiscloset:clothes_taiga"
+  ]
+}

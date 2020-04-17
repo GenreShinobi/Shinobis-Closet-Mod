@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+          [
+            "bab",
+            "xix",
+            "xxx"
+          ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:orange_wool"
+    },
+    "a":
+    {
+      "item": "minecraft:sugar_cane"
+    },
+    "i":
+    {
+      "item": "minecraft:dead_bush"
+    },
+    "b":
+    {
+      "item": "minecraft:cactus"
+    }
+  },
+  "result":
+  {
+    "item": "shinobiscloset:clothes_desert",
+    "count": 1
+  }
+}

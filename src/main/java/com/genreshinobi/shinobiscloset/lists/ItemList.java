@@ -19,4 +19,6 @@ public class ItemList {
     public static ClothesItem CLOTHES_PLAINS;
     @ObjectHolder("shinobiscloset:clothes_jungle")
     public static ClothesItem CLOTHES_JUNGLE;
+    @ObjectHolder("shinobiscloset:shroud")
+    public static ClothesItem SHROUD;
 }

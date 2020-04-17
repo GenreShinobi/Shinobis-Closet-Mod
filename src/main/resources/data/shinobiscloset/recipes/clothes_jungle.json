@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+          [
+            "bab",
+            "xix",
+            "xxx"
+          ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:yellow_wool"
+    },
+    "a":
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    "i":
+    {
+      "item": "minecraft:jungle_log"
+    },
+    "b":
+    {
+      "item": "minecraft:feather"
+    }
+  },
+  "result":
+  {
+    "item": "shinobiscloset:clothes_jungle",
+    "count": 1
+  }
+}

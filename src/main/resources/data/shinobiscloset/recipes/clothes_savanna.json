@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+          [
+            "bab",
+            "xix",
+            "xxx"
+          ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:red_wool"
+    },
+    "a":
+    {
+      "item": "minecraft:beef"
+    },
+    "i":
+    {
+      "item": "minecraft:acacia_log"
+    },
+    "b":
+    {
+      "item": "minecraft:leather"
+    }
+  },
+  "result":
+  {
+    "item": "shinobiscloset:clothes_savanna",
+    "count": 1
+  }
+}

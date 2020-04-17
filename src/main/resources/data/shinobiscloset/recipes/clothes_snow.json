@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+          [
+            "bab",
+            "xix",
+            "xxx"
+          ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:light_blue_wool"
+    },
+    "a":
+    {
+      "item": "minecraft:snowball"
+    },
+    "i":
+    {
+      "item": "minecraft:spruce_log"
+    },
+    "b":
+    {
+      "item": "minecraft:packed_ice"
+    }
+  },
+  "result":
+  {
+    "item": "shinobiscloset:clothes_snow",
+    "count": 1
+  }
+}

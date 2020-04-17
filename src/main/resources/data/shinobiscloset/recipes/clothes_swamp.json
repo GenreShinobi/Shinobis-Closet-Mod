@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+          [
+            "bab",
+            "xix",
+            "xxx"
+          ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:purple_wool"
+    },
+    "a":
+    {
+      "item": "minecraft:vine"
+    },
+    "i":
+    {
+      "item": "minecraft:oak_log"
+    },
+    "b":
+    {
+      "item": "minecraft:lily_pad"
+    }
+  },
+  "result":
+  {
+    "item": "shinobiscloset:clothes_swamp",
+    "count": 1
+  }
+}

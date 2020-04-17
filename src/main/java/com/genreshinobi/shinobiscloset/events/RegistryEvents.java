@@ -30,7 +30,8 @@ public class RegistryEvents {
             ItemList.CLOTHES_SAVANNA = new ClothesItem("clothes_savanna", IVillagerType.SAVANNA, new Item.Properties().group(ItemGroup.MISC)),
             ItemList.CLOTHES_SNOW = new ClothesItem("clothes_snow", IVillagerType.SNOW, new Item.Properties().group(ItemGroup.MISC)),
             ItemList.CLOTHES_SWAMP = new ClothesItem("clothes_swamp", IVillagerType.SWAMP, new Item.Properties().group(ItemGroup.MISC)),
-            ItemList.CLOTHES_TAIGA = new ClothesItem("clothes_taiga", IVillagerType.TAIGA, new Item.Properties().group(ItemGroup.MISC))
+            ItemList.CLOTHES_TAIGA = new ClothesItem("clothes_taiga", IVillagerType.TAIGA, new Item.Properties().group(ItemGroup.MISC)),
+            ItemList.SHROUD = new ClothesItem("shroud", new Item.Properties().group(ItemGroup.MISC), true)
         );
     }
 }

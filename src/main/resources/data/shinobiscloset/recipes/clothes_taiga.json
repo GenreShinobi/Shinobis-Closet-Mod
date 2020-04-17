@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+          [
+            "bab",
+            "xix",
+            "xxx"
+          ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:white_wool"
+    },
+    "a":
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    "i":
+    {
+      "item": "minecraft:spruce_log"
+    },
+    "b":
+    {
+      "item": "minecraft:rabbit_hide"
+    }
+  },
+  "result":
+  {
+    "item": "shinobiscloset:clothes_taiga",
+    "count": 1
+  }
+}

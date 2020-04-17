@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+          [
+            "bab",
+            "xix",
+            "xxx"
+          ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:brown_wool"
+    },
+    "a": [
+    {
+      "item": "minecraft:red_tulip"
+    },
+      {
+        "item": "minecraft:orange_tulip"
+      },
+      {
+        "item": "minecraft:white_tulip"
+      },
+      {
+        "item": "minecraft:pink_tulip"
+      }],
+    "i":
+    {
+      "item": "minecraft:oak_log"
+    },
+    "b":
+    {
+      "item": "minecraft:leather"
+    }
+  },
+  "result":
+  {
+    "item": "shinobiscloset:clothes_plains",
+    "count": 1
+  }
+}
