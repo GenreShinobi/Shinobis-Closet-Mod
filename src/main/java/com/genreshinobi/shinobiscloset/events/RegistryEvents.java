@@ -24,7 +24,16 @@ public class RegistryEvents {
     public ResourceLocation Location (String name) { return new ResourceLocation(MOD_ID, name); }
 
     @SubscribeEvent
+    public static void onModConfigEvent(final ModConfig.ModConfigEvent event) {
+        if (event.getConfig().getSpec() == Config.CLIENT_SPEC) {
+            Config.bakeConfig();
+        }
+    }
+
+    @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> event) {
+        LOGGER.info("The config is currently setting durability to ..." + Config.getShroudDurability());
+
         event.getRegistry().registerAll(
             ItemList.CLOTHES_DESERT = new ClothesItem("clothes_desert", IVillagerType.DESERT, new Item.Properties().group(ItemGroup.MISC)),
             ItemList.CLOTHES_JUNGLE = new ClothesItem("clothes_jungle", IVillagerType.JUNGLE, new Item.Properties().group(ItemGroup.MISC)),
@@ -35,12 +44,5 @@ public class RegistryEvents {
             ItemList.CLOTHES_TAIGA = new ClothesItem("clothes_taiga", IVillagerType.TAIGA, new Item.Properties().group(ItemGroup.MISC)),
             ItemList.SHROUD = new ClothesItem("shroud", new Item.Properties().group(ItemGroup.MISC), true)
         );
-    }
-
-    @SubscribeEvent
-    public static void onModConfigEvent(final ModConfig.ModConfigEvent configEvent) {
-        if (configEvent.getConfig().getSpec() == Config.CLIENT_SPEC) {
-            Config.bakeConfig();
-        }
     }
 }

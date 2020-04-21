@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.15.2-1.0.0.4'
+version = '1.15.2-1.0.0.4' // Don't forget to update the mods.toml
 group = 'com.genreshinobi.shinobiscloset' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'shinobiscloset'
 

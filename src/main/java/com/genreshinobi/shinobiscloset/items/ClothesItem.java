@@ -1,5 +1,7 @@
 package com.genreshinobi.shinobiscloset.items;
 
+import com.genreshinobi.shinobiscloset.ShinobisCloset;
+import com.genreshinobi.shinobiscloset.config.Config;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.merchant.villager.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -54,13 +56,24 @@ public class ClothesItem extends Item {
                 }
                 villagerEntity.setVillagerData(villagerEntity.getVillagerData().withType(this.villagerType));
             }
-            if(consumedOnUse) {
+
+            if(consumeClothes()) {
                 stackIn.shrink(1);
             }
+            stackIn.damageItem(1, playerIn, (p_220040_1_) -> p_220040_1_.sendBreakAnimation(handIn));
+
             return true;
         } else {
             return false;
         }
     }
 
+    @Override
+    public int getMaxDamage(ItemStack stack) {
+        return Config.getShroudDurability();
+    }
+
+    public boolean consumeClothes() {
+        return Config.getConsumeClothes();
+    }
 }

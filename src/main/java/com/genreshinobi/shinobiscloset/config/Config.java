@@ -1,16 +1,15 @@
 package com.genreshinobi.shinobiscloset.config;
 
 import com.genreshinobi.shinobiscloset.ShinobisCloset;
-import net.minecraftforge.common.ForgeConfig.Client;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.*;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import org.apache.commons.lang3.tuple.Pair;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = ShinobisCloset.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config {
+
+    // TODO: Add SimpleRecipe Configs
 
         public static final ClientConfig CLIENT;
         public static final ForgeConfigSpec CLIENT_SPEC;
@@ -21,31 +20,39 @@ public class Config {
         }
 
         // Bake the config values
-        private static boolean aBoolean;
-        private static int anInt;
+        private static int shroudDurability;
+        private static boolean consumeClothes;
 
         public static void bakeConfig() {
-            aBoolean = CLIENT.aBoolean.get();
-            anInt = CLIENT.anInt.get();
+            shroudDurability = CLIENT.shroudDurability.get();
+            consumeClothes = CLIENT.consumeClothes.get();
+        }
+
+        public static int getShroudDurability() {
+            return shroudDurability;
+        }
+
+        public static boolean getConsumeClothes() {
+            return consumeClothes;
         }
 
         // Doesn't need to be an inner class
         public static class ClientConfig {
 
-            public final BooleanValue aBoolean;
-            public final IntValue anInt;
+            public final IntValue shroudDurability;
+            public final BooleanValue consumeClothes;
 
             public ClientConfig(ForgeConfigSpec.Builder builder) {
-                aBoolean = builder
-                        .comment("aBoolean usage description")
-                        .translation(ShinobisCloset.MOD_ID + ".config." + "aBoolean")
-                        .define("aBoolean", false);
+                builder.push("gameplay");
+                shroudDurability = builder
+                        .comment("Modifies the durability of Shinobi's Fabulous Shroud. Infinite: 0")
+                        .translation(ShinobisCloset.MOD_ID + ".config." + "shroudDurability")
+                        .defineInRange("shroudDurability", 0, 0, 100);
 
-                builder.push("category");
-                anInt = builder
-                        .comment("anInt usage description")
-                        .translation(ShinobisCloset.MOD_ID + ".config." + "anInt")
-                        .defineInRange("anInt", 10, 0, 100);
+                consumeClothes = builder
+                        .comment("Modifies if individual clothes are consumed on use. True: Clothes will be consumed on use. False: Clothes will have an unlimited number of uses. Default: true")
+                        .translation(ShinobisCloset.MOD_ID + ".config." + "consumeClothes")
+                        .define("consumeClothes", true);
 
                 builder.pop();
 
