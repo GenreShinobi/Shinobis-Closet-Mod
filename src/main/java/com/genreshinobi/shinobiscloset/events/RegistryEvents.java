@@ -1,6 +1,7 @@
 package com.genreshinobi.shinobiscloset.events;
 
 import com.genreshinobi.shinobiscloset.ShinobisCloset;
+import com.genreshinobi.shinobiscloset.config.Config;
 import com.genreshinobi.shinobiscloset.items.ClothesItem;
 import com.genreshinobi.shinobiscloset.lists.ItemList;
 import net.minecraft.entity.villager.IVillagerType;
@@ -10,6 +11,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import org.apache.logging.log4j.Logger;
 
 import javax.annotation.Resource;
@@ -33,5 +35,12 @@ public class RegistryEvents {
             ItemList.CLOTHES_TAIGA = new ClothesItem("clothes_taiga", IVillagerType.TAIGA, new Item.Properties().group(ItemGroup.MISC)),
             ItemList.SHROUD = new ClothesItem("shroud", new Item.Properties().group(ItemGroup.MISC), true)
         );
+    }
+
+    @SubscribeEvent
+    public static void onModConfigEvent(final ModConfig.ModConfigEvent configEvent) {
+        if (configEvent.getConfig().getSpec() == Config.CLIENT_SPEC) {
+            Config.bakeConfig();
+        }
     }
 }
